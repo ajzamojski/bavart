@@ -27,7 +27,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-require("./routes/api-routes.js")(app);
+require("./routes/item-routes.js")(app);
 require("./routes/users-routes.js")(app);
 // app.use("/", routes);
 
