@@ -28,7 +28,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 require("./routes/item-routes.js")(app);
-require("./routes/users-routes.js")(app);
+require("./routes/user-routes.js")(app);
 // app.use("/", routes);
 
 db.sequelize.sync({}).then(function() {
