@@ -26,9 +26,13 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Static directory
+app.use(express.static(process.cwd() + "/public"));
+
 // Import routes and give the server access to them.
 require("./routes/item-routes.js")(app);
 require("./routes/user-routes.js")(app);
+require("./routes/html-routes.js")(app);
 // app.use("/", routes);
 
 db.sequelize.sync({}).then(function() {
